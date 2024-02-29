@@ -10,14 +10,29 @@
 </head>
 <body>
     <!-- header section -->
-    <header>
-        <section>
-            <h1 class="text-5xl text-center mt-8">AI Universe Hub</h1>
-        </section>
+    <header class="text-center">
+        <h1 class="text-6xl my-8">AI courses</h1>
+        <button class="bg-transparent hover:bg-yellow-500 text-blue-700 font-semibold hover:text-black py-2 px-4 border border-blue-500 hover:border-transparent rounded" id="sort-btn">Sort By Date
+        </button>
     </header>
-    <!-- main section -->
+    
     <main>
+        <!-- start all data show area -->
+        <section class="container mx-auto mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="show-courses">
 
+            </div>
+            <!-- see more data -->
+            <div class="text-center my-8" id="see-more">
+                <button class="btn btn-outline btn-warning">See more</button>
+            </div>
+        </section>
+        <!-- end all data show area -->
     </main>
+
+
+    <!-- JS document -->
+    <script src="scripts/singleItem.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
