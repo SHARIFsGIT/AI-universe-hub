@@ -1,4 +1,5 @@
 const allData = async() => {
+    toggleLoadingSpinner(true);
     const res = await fetch(`https://openapi.programming-hero.com/api/ai/tools`);
     const data = await res.json();
     const courses = data.data.tools;
@@ -26,5 +27,16 @@ const displayCourses = courses => {
         coursesContainer.appendChild(courseCard);
     }));
 }
+
+// spinner
+const toggleLoadingSpinner = (isLoading) => {
+    const loadingSpinner = document.getElementById('loading-spinner');
+    if(isLoading){
+        loadingSpinner.classList.remove('hidden');
+    }
+    else{
+        loadingSpinner.classList.add('hidden');
+    }
+};
 
 allData();
